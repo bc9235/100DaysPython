@@ -22,7 +22,7 @@ for char in range(1, nr_symbols + 1):
 #final loop for numbers 
 for int in range(1, nr_numbers + 1):
   password += random.choice(numbers)
-print(password)
+print(f'Your password is: {password}')
   
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
@@ -43,4 +43,4 @@ random.shuffle(passlist)
 password = ''
 for item in passlist:
   password += str(item)
-print(password)
+print(f'Your password is: {password}')
