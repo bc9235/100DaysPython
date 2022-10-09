@@ -13,7 +13,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 #e.g. 4 letter, 2 symbol, 2 number = JduE&!91
 #set password to empty string to build on
 password = ''
-#create loop and set user input as range for # of times to loop through letters 
+#create loop and set user input as range for # of times to pick random letters 
 for char in range(1, nr_letters + 1):
   password += random.choice(letters)
 #make another loop for symbols 
@@ -37,7 +37,7 @@ for char in range(1, nr_symbols + 1):
 #loop for numbers
 for int in range(1, nr_numbers + 1):
   passlist += random.choice(numbers)
-#shuffle order of password
+#shuffle order of passlist
 random.shuffle(passlist)
 #loop to add each entry of list to new string
 password = ''
