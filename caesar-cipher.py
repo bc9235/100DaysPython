@@ -13,7 +13,7 @@ def caesar(start_text, shift_amount, cipher_direction):
     if char.isalpha():
       position = alphabet.index(char)
       new_position = position + shift_amount
-      #if letter towards end of alphabet, move to start 
+      #prevent out of bounds error.  if original letter towards end of alphabet, move to start of list.
       if new_position > 25:
         new_position -= 26
       end_text += alphabet[new_position]
