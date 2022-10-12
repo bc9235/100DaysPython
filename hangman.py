@@ -22,7 +22,9 @@ while not end_of_game:
   os.system('clear')
   print(hangman_art.logo)
   #If the user has entered a letter they've already guessed, print the letter and let them know.
-  if guess in guess_list:
+  if len(guess) > 1 or len(guess) < 1:
+    print('Invalid input.  Guess again.')
+  elif guess in guess_list:
     print(f'You have already guessed {guess}.')
   else:
     guess_list += guess
