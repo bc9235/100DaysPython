@@ -33,11 +33,11 @@ if leftright == 'left':
     doors = input('After getting off the boat, you find a passageway in the cliffs with three doors.  Which door do you choose?  Blue, yellow, or red? ').lower()
     #doors outcomes
     if doors == 'yellow':
-      print('You find a treasure chest in the room.  The chest is empty, but you\'re not dead.  You win!')
+      print('You find a treasure chest in the room.  You have found the Holy Hand Grendade!  You win!')
     elif doors == 'blue':
       print('You walk into a room full of hungry lions.  Game over.')
     else:
-      print('There were explosives rigged to explode when the door opens.  Game over.')
+      print('There were explosives rigged to the door.  Game over.')
   #swim outcome
   else:
    print('You drown in the current.  Game over.') 
