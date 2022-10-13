@@ -23,7 +23,7 @@ def caesar(start_text, shift_amount, cipher_direction):
   print(f"Here's the {cipher_direction}d result:\n{end_text}")
   print("Please save result as screen will clear upon restart or exit.")
 
-print(art.logo)
+print(caesar-art.logo)
 
 should_continue = True
 while should_continue:
@@ -41,12 +41,12 @@ while should_continue:
     if result == 'yes':
       #keep the screen uncluttered
       os.system('clear')
-      print(art.logo)
+      print(caesar-art.logo)
     else:
       should_continue = False
       os.system('clear')
       print('Goodbye.')
   else:
     os.system('clear')
-    print(art.logo)
+    print(caesar-art.logo)
     print("Invalid Input.")
