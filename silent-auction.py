@@ -1,7 +1,7 @@
 import os
 import silent-auction-art
 
-print(art.logo)
+print(silent-auction-art.logo)
 
 #set empty dictionary to hold name:bid pairs, bidders to accept name:bid pairs
 bids = {}
