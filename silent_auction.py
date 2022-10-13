@@ -1,5 +1,5 @@
 import os
-import silent-auction-art
+import silent_auction_art
 
 print(silent-auction-art.logo)
 
