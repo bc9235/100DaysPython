@@ -13,6 +13,7 @@ def calculate_score(cards):
   #checking for blackjack (2 cards totaling 21)
   if len(cards) == 2 and sum(cards) == 21:
     return 0
+  #if user score goes over 21 while ace in hand, change ace from 11 to 1
   if 11 in cards and sum(cards) > 21:
     cards.remove(11)
     cards.append(1)
@@ -54,7 +55,7 @@ def play_game():
     user_total = calculate_score(user_cards)
     computer_total = calculate_score(computer_cards)
     print(f"Your cards:  {user_cards} , current score:  {user_total}")
-    #check for blackjack/bust
+    #check for blackjack/21/bust
     if user_total == 0 or computer_total == 0 or user_total > 21 or user_total == 21:
       in_progress = False
       compare(user_total, computer_total)
@@ -66,8 +67,8 @@ def play_game():
         user_total = calculate_score(user_cards)
       else:
         in_progress = False
-      #when user is done drawing cards, computer draws as long as no blackjack and less than or equal to 17
-  while computer_total != 0 and computer_total <= 17 and user_total != 0 and user_total < 21:
+      #when user is done drawing cards, computer draws as long as no blackjack and less than to 17
+  while computer_total != 0 and computer_total < 17 and user_total != 0:
     print("     Dealer hits.")
     computer_cards.append(deal_card())
     computer_total = calculate_score(computer_cards)
