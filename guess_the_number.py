@@ -52,7 +52,6 @@ play = 'yes'
 while play == 'yes':
     #Generate number
     number = random.randint(1, 100)
-    print(number)
     play_game()
     play = input("Would you like to play again? ").lower()
     if play == 'yes':
