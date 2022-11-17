@@ -28,7 +28,6 @@ class Scoreboard(Turtle):
     def add_score(self):
         """Add to score and update scoreboard."""
         self.score += 1
-        self.clear()
         self.display()
 
     def game_over(self):
