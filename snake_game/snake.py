@@ -32,7 +32,15 @@ class Snake:
     def extend(self):
         """Make snake longer after eating food."""
         self.add_segment(self.segments[-1].position())
+        
+    def reset_snake(self):
+        for seg in self.segments:
+            seg.goto(700, 700)
+        self.segments.clear()
+        self.make_snake()
+        self.head = self.segments[0]
 
+    # define movement rules
     def move(self):
         """Make body of snake follow head."""
         for seg in range(len(self.segments) - 1, 0, -1):
@@ -41,7 +49,6 @@ class Snake:
             self.segments[seg].goto(new_x, new_y)
         self.segments[0].forward(MOVE_DISTANCE)
 
-    # define movement rules
     def up(self):
         if self.head.heading() != DOWN:
             self.head.setheading(UP)
