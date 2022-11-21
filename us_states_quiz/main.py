@@ -30,7 +30,6 @@ state_data = pandas.read_csv("50_states.csv")
 state_list = state_data.state.to_list()
 
 states_guessed = []
-need_to_study = []
 
 while len(states_guessed) < 50:
     # Ask user for guess
@@ -44,9 +43,7 @@ while len(states_guessed) < 50:
 
     # Exit and create CSV of states missed
     if user_answer == "Exit":
-        for entry in state_list:
-            if entry not in states_guessed:
-                need_to_study.append(entry)
+        need_to_study = [state for state in state_list if state not in states_guessed]
         report_df = pandas.DataFrame(need_to_study)
         report_df.to_csv("report.csv")
         break
