@@ -17,7 +17,9 @@ def set_location(y):
     location = (-300, y)
     pen.penup()
     pen.setpos(location)
+    
 
+screen = Screen()
 
 # colors in RGB
 colors = [(202, 164, 110), (149, 75, 50), (222, 201, 136), (53, 93, 123), (170, 154, 41), (138, 31, 20), (134, 163, 184),
@@ -39,6 +41,4 @@ for num in range(9):
     make_row()
     y += 50
 
-screen = Screen()
 screen.exitonclick()
-
