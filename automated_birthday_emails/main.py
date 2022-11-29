@@ -38,7 +38,7 @@ now = dt.datetime.now()
 now_month = now.month
 now_day = now.day
 
-# Read birthdays CSV and convert to dictionary
+# Read birthdays CSV and convert to list of dictionaries
 birthdays = pd.read_csv("birthdays.csv")
 birthday_list = birthdays.to_dict(orient="records")
 
