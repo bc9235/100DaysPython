@@ -8,7 +8,7 @@ WORD_FONT = ("Arial", 50, "bold")
 
 
 def new_card():
-    """Pick a random entry from list of pairs.  Display on card.  Flip the card."""
+    """Pick a random entry from list of pairs.  Display on card."""
     global current_card, timer
     window.after_cancel(timer)
     current_card = choice(words)
