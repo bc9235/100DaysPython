@@ -46,8 +46,8 @@ news_params = {
     "pageSize": 3,
 }
 
-# If price change greater than 1%, pull news articles, send text messages
-if price_change > 1:
+# If price change greater than 5%, pull news articles, send text messages
+if price_change > 5:
     # Make News API call
     news_response = requests.get(url=news_url, params=news_params)
     news_response.raise_for_status()
