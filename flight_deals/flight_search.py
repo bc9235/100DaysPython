@@ -59,14 +59,21 @@ class FlightSearch:
                 "date_to": six_months_format,
                 "nights_in_dst_from": 7,
                 "nights_in_dst_to": 28,
+                "flight_type": "round",
                 "one_for_city": True,
                 "curr": "USD",
             }
 
-            response = requests.get(url=f"{self.FLIGHT_ENDPOINT}/search", headers=self.header, params=search_params).json()
-            destination = response["data"][0]["cityTo"]
-            price = response["data"][0]["price"]
-            # Store city name as key and price as value to dictionary
-            dest_prices[destination] = price
+            try:
+                response = requests.get(url=f"{self.FLIGHT_ENDPOINT}/search", headers=self.header,
+                                        params=search_params).json()["data"][0]
+            except IndexError:
+                print(f"No flights found for {entry}.")
+            else:
+                destination = response["cityTo"]
+                price = response["price"]
+                # Store city name as key and price as value to dictionary
+                dest_prices[destination] = price
 
         return dest_prices
+
