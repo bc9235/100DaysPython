@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="top">
+        <div class="title"><h1>My Blog</h1></div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{ content[0]["title"] }}</h2>
+            <p class="text">{{ content[0]["subtitle"] }} </p>
+            <a href="/post/{{ content[0]['id'] }}">Read</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h2>{{ content[1]["title"] }}</h2>
+            <p class="text">{{ content[1]["subtitle"] }} </p>
+            <a href="/post/{{ content[1]['id'] }}">Read</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
